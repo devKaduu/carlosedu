@@ -1,4 +1,4 @@
-import { HomeTemplate } from "@/pages/home";
+import { HomeTemplate } from "@/template/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

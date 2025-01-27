@@ -1,4 +1,4 @@
-import { NotFoundTemplate } from "@/pages/not-found";
+import { NotFoundTemplate } from "@/template/not-found";
 
 export default function Building() {
   return <NotFoundTemplate />;
