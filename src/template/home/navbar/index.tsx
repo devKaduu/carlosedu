@@ -3,9 +3,9 @@ import { GoHome, GoPerson } from "react-icons/go";
 
 export const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between w-full m-auto mt-11 max-sm:px-4">
+    <nav className="flex items-center justify-between w-full m-auto mt-11 max-xl:px-4">
       <p className="text-2xl">carlosedu</p>
-      <ul className="flex items-center gap-10 bg-navbar rounded-full pl-2 pt-2 pr-8 pb-2 max-sm:hidden">
+      <ul className="flex items-center gap-10 bg-navbar rounded-full pl-2 pt-2 pr-8 pb-2 max-md:hidden">
         <li className="bg-bgButtonNavbar px-4 py-2 rounded-button">
           <a href="">
             <GoHome size={20} />
