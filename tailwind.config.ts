@@ -9,8 +9,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        black: {
+          background: "#101111",
+          navbar: "#1C1C1C",
+          bgButtonNavbar: "#292929",
+          black: "#000",
+        },
+      },
+      fontSize: {
+        title: "2rem",
+      },
+      lineHeight: {
+        title: "3.513rem",
+      },
+      borderRadius: {
+        button: "2.5rem",
       },
     },
   },
