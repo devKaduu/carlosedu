@@ -15,3 +15,7 @@ body {
 .background-gradient {
   background: linear-gradient(90deg, rgba(122, 135, 251, 1) 0%, rgba(255, 212, 156, 1) 100%);
 }
+
+.gradient-marquee {
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+}

@@ -3,7 +3,7 @@ import imageHero from "@/assets/hero.png";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center">
+    <section className="flex flex-col items-center justify-center text-center">
       <div className="relative w-full h-[568px] mt-14">
         <h1 className="text-title max-sm:text-2xl mb-3 mt-28 max-xl:mt-32 max-lg:mt-30">
           I design and build clean websites
@@ -20,6 +20,6 @@ export const Hero = () => {
           <a href="https://www.instagram.com/kadu_sz/">Hire me</a>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
