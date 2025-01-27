@@ -10,12 +10,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        black: {
-          background: "#101111",
-          navbar: "#1C1C1C",
-          bgButtonNavbar: "#292929",
-          black: "#000",
-        },
+        background: "#101111",
+        navbar: "#1C1C1C",
+        bgButtonNavbar: "#292929",
+        black: "#000",
       },
       fontSize: {
         title: "2rem",
