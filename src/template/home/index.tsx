@@ -1,3 +1,4 @@
+import { Experience } from "./experience";
 import { Hero } from "./hero";
 import { Marquee } from "./marquee";
 import { Navbar } from "./navbar";
@@ -8,6 +9,7 @@ export const HomeTemplate = () => {
       <Navbar />
       <Hero />
       <Marquee />
+      <Experience />
       <div className="h-dvh"></div>
     </main>
   );

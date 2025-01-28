@@ -17,6 +17,7 @@ export default {
       },
       fontSize: {
         title: "2rem",
+        sectionTitle: "2.5rem",
       },
       lineHeight: {
         title: "3.513rem",
