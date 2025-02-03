@@ -2,6 +2,7 @@ import { Experience } from "./experience";
 import { Hero } from "./hero";
 import { Marquee } from "./marquee";
 import { Navbar } from "./navbar";
+import { SomeProjects } from "./some-projects";
 
 export const HomeTemplate = () => {
   return (
@@ -10,6 +11,7 @@ export const HomeTemplate = () => {
       <Hero />
       <Marquee />
       <Experience />
+      <SomeProjects />
       <div className="h-dvh"></div>
     </main>
   );

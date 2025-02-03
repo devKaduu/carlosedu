@@ -3,12 +3,7 @@
 import Image from "next/image";
 import marqueeIcon from "@/assets/marquee.png";
 
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
 import * as motion from "motion/react-client";
-
-gsap.registerPlugin(useGSAP);
 
 export const Marquee = () => {
   const marqueeItems = [
@@ -30,7 +25,7 @@ export const Marquee = () => {
         <motion.div
           initial={{ x: 0 }}
           animate={{ x: `-100%` }}
-          transition={{ duration: 100, repeat: Infinity, ease: "linear", repeatDelay: 0, repeatType: "loop" }}
+          transition={{ duration: 120, repeat: Infinity, ease: "linear", repeatDelay: 0, repeatType: "loop" }}
           className="w-max flex items-center gap-24 py-5"
         >
           {marqueeItems.map((item, index) => (
