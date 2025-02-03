@@ -16,7 +16,7 @@ export const SomeProjects = () => {
           viewport={{ once: true, amount: 0.7 }}
           className="text-sectionTitle max-sm:text-3xl"
         >
-          Some Featured projects <br className="sm:visible" /> I have worked on
+          Some Featured projects <br className="sm:hidden " /> I have worked on
         </motion.p>
 
         <motion.div
@@ -33,7 +33,7 @@ export const SomeProjects = () => {
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-        viewport={{ once: true, amount: 0.7 }}
+        viewport={{ once: true }}
         className="flex items-center justify-center flex-col absolute left-0 right-0 "
       >
         <Title firstText="FI" secondText="AP" image={FIAP.src} src="https://www.fiap.com.br/" />
