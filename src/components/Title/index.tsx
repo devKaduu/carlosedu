@@ -17,10 +17,11 @@ export const Title = ({ firstText, secondText, image, src }: TitleProps) => {
   return (
     <a
       href={src}
-      className="flex flex-row items-center justify-center w-screen h-24 border-bottom-gradient text-center max-xl: "
-      onMouseEnter={() => setIsHovered(true)}
+      className="flex flex-row items-center justify-center w-screen h-24 border-bottom-gradient text-center"
+      onMouseMove={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       target="_blank"
+      rel="noopener noreferrer"
     >
       <p className="uppercase text-8xl font-bold leading-normal not-italic max-xl:text-4xl max-sm:text-2xl">
         {firstText}
@@ -33,6 +34,8 @@ export const Title = ({ firstText, secondText, image, src }: TitleProps) => {
         }}
         transition={{ ease: "backOut", duration: 0.5 }}
         src={image}
+        className="overflow-hidden z-10"
+        alt="Projects"
       />
       <p className="uppercase text-8xl font-bold leading-normal not-italic max-xl:text-4xl max-sm:text-2xl">
         {secondText}
