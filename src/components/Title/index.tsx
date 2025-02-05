@@ -23,7 +23,7 @@ export const Title = ({ firstText, secondText, image, src }: TitleProps) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <p className="uppercase text-8xl font-bold leading-normal not-italic max-xl:text-4xl max-sm:text-2xl">
+      <p className="uppercase text-8xl font-bold leading-normal not-italic max-2xl:text-7xl max-xl:text-4xl max-sm:text-2xl">
         {firstText}
       </p>
       <motion.img
@@ -34,10 +34,10 @@ export const Title = ({ firstText, secondText, image, src }: TitleProps) => {
         }}
         transition={{ ease: "backOut", duration: 0.5 }}
         src={image}
-        className="overflow-hidden z-10"
+        className="overflow-hidden z-10 max-sm:hidden"
         alt="Projects"
       />
-      <p className="uppercase text-8xl font-bold leading-normal not-italic max-xl:text-4xl max-sm:text-2xl">
+      <p className="uppercase text-8xl font-bold leading-normal not-italic max-2xl:text-7xl max-xl:text-4xl max-sm:text-2xl">
         {secondText}
       </p>
     </a>

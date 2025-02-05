@@ -7,8 +7,8 @@ import { Postech, Rocknew, FIAP, Appfiap } from "@/assets/some-projects";
 
 export const SomeProjects = () => {
   return (
-    <section className="mt-48 max-xl:px-12 max-sm:px-5">
-      <div className="flex items-center gap-7 mb-36">
+    <section className="mt-48 max-xl:px-12 max-sm:px-5 relative h-screen">
+      <div className="flex items-center gap-7">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ export const SomeProjects = () => {
           viewport={{ once: true, amount: 0.7 }}
           className="text-sectionTitle max-sm:text-3xl"
         >
-          Some Featured projects <br className="sm:hidden " /> I have worked on
+          Some Featured projects <br className="sm:hidden" /> I have worked on
         </motion.p>
 
         <motion.div
@@ -34,7 +34,7 @@ export const SomeProjects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="flex items-center justify-center flex-col absolute left-0 right-0 "
+        className="flex items-center justify-center flex-col absolute left-0 right-0 top-48"
       >
         <Title firstText="FI" secondText="AP" image={FIAP.src} src="https://www.fiap.com.br/" />
         <Title
@@ -43,7 +43,12 @@ export const SomeProjects = () => {
           image={Appfiap.src}
           src="https://www.fiap.com.br/colegio/"
         />
-        <Title firstText="pos" secondText="tech" image={Postech.src} src="https://postech.fiap.com.br/" />
+        <Title
+          firstText="pos"
+          secondText="tech"
+          image={Postech.src}
+          src="https://postech.fiap.com.br/"
+        />
         <Title
           firstText="rock&nbsp;"
           secondText="new ventures"
