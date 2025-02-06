@@ -1,31 +1,58 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { GoHome, GoPerson } from "react-icons/go";
 
+const tabs = [<GoHome size={20} key={0} />, "About", "Projects", "Contact me"];
+
 export const Navbar = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoverStyle, setHoverStyle] = useState({});
+  const tabRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+
+  useEffect(() => {
+    if (hoveredIndex !== null) {
+      const hoveredElement = tabRefs.current[hoveredIndex];
+      if (hoveredElement) {
+        const { offsetLeft, offsetWidth } = hoveredElement;
+        setHoverStyle({
+          left: `${offsetLeft}px`,
+          width: `${offsetWidth}px`,
+        });
+      }
+    }
+  }, [hoveredIndex]);
+
   return (
     <nav className="flex items-center justify-between w-full m-auto mt-11 max-xl:px-12 max-sm:px-5">
       <p className="text-2xl">carlosedu</p>
-      <ul className="flex items-center gap-10 bg-navbar rounded-full pl-2 pt-2 pr-8 pb-2 max-md:hidden">
-        <li className="bg-bgButtonNavbar px-4 py-2 rounded-button">
-          <a href="">
-            <GoHome size={20} />
-          </a>
-        </li>
-        <li>
-          <Link href="/in-building" className="text-base">
-            About
+
+      <div
+        className={`absolute h-8 transition-all duration-300 ease-out bg-[#ffffff1a] rounded-full  ${
+          hoveredIndex === 0 && "h-11"
+        }`}
+        style={{
+          ...hoverStyle,
+          opacity: hoveredIndex !== null ? 1 : 0,
+        }}
+      />
+
+      <ul className="flex items-center justify-around gap-10 bg-navbar rounded-full px-4  pt-2 pb-2 max-md:hidden">
+        {tabs.map((tab, index) => (
+          <Link
+            href="/notfound"
+            key={index}
+            ref={(el) => {
+              tabRefs.current[index] = el;
+            }}
+            className={`px-4 py-2 rounded-button relative cursor-pointer`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {tab}
           </Link>
-        </li>
-        <li>
-          <Link href="/in-building" className="text-base">
-            Projects
-          </Link>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/kadu_sz/" className="text-base">
-            Contact me
-          </a>
-        </li>
+        ))}
       </ul>
       <div className="flex items-center">
         <button className="text-base bg-bgButtonNavbar py-3 px-5 rounded-button font-medium">
