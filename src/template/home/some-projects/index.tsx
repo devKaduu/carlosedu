@@ -7,7 +7,7 @@ import { Postech, Rocknew, FIAP, Appfiap } from "@/assets/some-projects";
 
 export const SomeProjects = () => {
   return (
-    <section className="mt-48 max-xl:px-12 max-sm:px-5 relative h-screen">
+    <section className="mt-48 max-xl:px-12 max-sm:px-5 relative h-[80vh]">
       <div className="flex items-center gap-7">
         <motion.p
           initial={{ opacity: 0, y: 10 }}

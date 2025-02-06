@@ -7,7 +7,7 @@ import { SomeProjects } from "./some-projects";
 
 export const HomeTemplate = () => {
   return (
-    <main className="max-w-[68.188rem]  m-auto">
+    <main className="max-w-[68.188rem] m-auto">
       <Navbar />
       <Hero />
       <Marquee />

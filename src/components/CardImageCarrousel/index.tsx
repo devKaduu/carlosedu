@@ -10,7 +10,7 @@ export const CardImageCarrousel = ({ src, alt, index }: CardImageCarrouselProps)
   return (
     <motion.img
       src={src}
-      className="max-w-[545px] max-sm:w-80 object-center h-full"
+      className="max-w-[545px] max-sm:w-80 object-center h-full cursor-pointer"
       alt={alt}
       initial={{ opacity: 0, y: 150 }}
       whileInView={{ opacity: 1, y: 0 }}

@@ -3,8 +3,13 @@ import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
+import { MouseMoveEffect } from "@/components/MouseMoveEffect";
 
-const poppins = Poppins({ weight: ["400", "700", "500"], subsets: ["latin"], variable: "--font-poppins" });
+const poppins = Poppins({
+  weight: ["400", "700", "500"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Carlos Eduardo",
@@ -19,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable}  antialiased`}>
+        <MouseMoveEffect />
         {children}
         <Analytics />
       </body>

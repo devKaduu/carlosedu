@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
 import { CardImageCarrousel } from "@/components/CardImageCarrousel";
@@ -10,13 +10,17 @@ import stars from "@/assets/stars.png";
 import Image from "next/image";
 
 export const MoreProjects = () => {
-  const viewport = window.innerWidth;
+  const [viewport, setViewport] = useState(0);
+
+  useEffect(() => {
+    setViewport(window.innerWidth);
+  }, []);
 
   const targetRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0", viewport <= 550 ? "-81%" : "-70%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0", viewport <= 550 ? "-81%" : "-66%"]);
 
   return (
     <section className=" max-xl:px-12 max-sm:px-5" ref={targetRef}>
@@ -42,7 +46,7 @@ export const MoreProjects = () => {
       </div>
       <div className="h-[500vh]">
         <div className="h-screen sticky top-0 z-10">
-          <div className="w-full h-full overflow-hidden relative flex items-center justify-start">
+          <div className="w-full h-fit overflow-hidden relative flex items-start pt-44 justify-start">
             <motion.div className="flex w-max gap-[3vw] max-sm:gap-16" style={{ x }}>
               {cards.map(({ src, alt }, index) => (
                 <div key={index}>
