@@ -30,7 +30,7 @@ export const Navbar = () => {
 
       <div
         className={`absolute h-8 transition-all duration-300 ease-out bg-[#ffffff1a] rounded-full  ${
-          hoveredIndex === 0 && "h-11"
+          hoveredIndex === 0 ? "h-11" : "h-8"
         }`}
         style={{
           ...hoverStyle,
