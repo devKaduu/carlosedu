@@ -10,11 +10,13 @@ import stars from "@/assets/stars.png";
 import Image from "next/image";
 
 export const MoreProjects = () => {
+  const viewport = window.innerWidth;
+
   const targetRef = useRef(null);
 
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0", "-66%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0", viewport <= 550 ? "-81%" : "-70%"]);
 
   return (
     <section className=" max-xl:px-12 max-sm:px-5" ref={targetRef}>
