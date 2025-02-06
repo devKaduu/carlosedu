@@ -18,12 +18,15 @@ export const MoreProjects = () => {
 
   const targetRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({ target: targetRef });
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end end"],
+  });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0", viewport <= 550 ? "-81%" : "-66%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["8%", viewport <= 550 ? "-81%" : "-72%"]);
 
   return (
-    <section className=" max-xl:px-12 max-sm:px-5" ref={targetRef}>
+    <section className="max-xl:px-12 max-sm:px-5" ref={targetRef}>
       <div className="flex items-center gap-7">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -44,7 +47,7 @@ export const MoreProjects = () => {
           <Image src={stars} alt="Gradient Image" width={39} />
         </motion.div>
       </div>
-      <div className="h-[500vh]">
+      <div className="h-[550vh]">
         <div className="h-screen sticky top-0 z-10">
           <div className="w-full h-fit overflow-hidden relative flex items-start pt-44 justify-start">
             <motion.div className="flex w-max gap-[3vw] max-sm:gap-16" style={{ x }}>
