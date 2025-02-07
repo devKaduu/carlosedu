@@ -1,4 +1,6 @@
 import { Experience } from "./experience";
+import Footer from "./footer";
+import { FrontEnd } from "./letters";
 import { Hero } from "./hero";
 import { Marquee } from "./marquee";
 import { MoreProjects } from "./more-projects";
@@ -7,14 +9,16 @@ import { SomeProjects } from "./some-projects";
 
 export const HomeTemplate = () => {
   return (
-    <main className="max-w-[68.188rem] m-auto">
+    <main className="">
       <Navbar />
       <Hero />
       <Marquee />
       <Experience />
       <SomeProjects />
       <MoreProjects />
-      <div className="h-[900vh]" />
+      <FrontEnd />
+      <Footer />
+      {/* <div className="h-[900vh]" /> */}
     </main>
   );
 };

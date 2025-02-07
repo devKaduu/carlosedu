@@ -25,7 +25,7 @@ export const Navbar = () => {
   }, [hoveredIndex]);
 
   return (
-    <nav className="flex items-center justify-between w-full m-auto mt-11 max-xl:px-12 max-sm:px-5">
+    <nav className="max-w-[68.188rem] m-auto flex items-center justify-between w-full m-auto mt-11 max-xl:px-12 max-sm:px-5">
       <p className="text-2xl">carlosedu</p>
 
       <div

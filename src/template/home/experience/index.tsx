@@ -32,7 +32,7 @@ export const Experience = () => {
   ];
 
   return (
-    <section className="mt-48 max-xl:px-12 max-sm:px-5">
+    <section className="mt-48 max-xl:px-12 max-sm:px-5 max-w-[68.188rem] m-auto">
       <div className="flex items-center gap-7 mb-14">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
