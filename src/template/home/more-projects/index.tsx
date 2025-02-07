@@ -48,7 +48,7 @@ export const MoreProjects = () => {
         </motion.div>
       </div>
       <div className="h-[550vh]">
-        <div className="h-screen sticky top-0 z-10">
+        <div className="h-dvh sticky top-0 z-10 max-sm:h-[80dvh]">
           <div className="w-full h-fit overflow-hidden relative flex items-start pt-44 justify-start">
             <motion.div className="flex w-max gap-[3vw] max-sm:gap-16" style={{ x }}>
               {cards.map(({ src, alt }, index) => (

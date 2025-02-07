@@ -1,6 +1,4 @@
-import AboutTop from "./top.png";
-import Aboutbottom from "./bottom.png";
-import Aboutleft from "./left.png";
-import Aboutright from "./right.png";
+import Fiap from "@/assets/about/fiap-logo.svg";
+import Cea from "@/assets/about/cea-logo.png";
 
-export { AboutTop, Aboutbottom, Aboutleft, Aboutright };
+export { Cea, Fiap };

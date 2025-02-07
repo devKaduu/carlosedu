@@ -1,4 +1,5 @@
 "use client";
+
 import Picture1 from "@/assets/me.jpeg";
 import Image from "next/image";
 import { useRef } from "react";
@@ -48,7 +49,7 @@ export const FrontEnd = () => {
   });
 
   return (
-    <main className="overflow-hidden relative w-full h-screen ">
+    <main className="overflow-hidden relative w-full h-dvh max-sm:h-[40dvh]">
       <div ref={container} className="absolute top-28 left-0">
         <Slide src={Picture1} left={"-45%"} progress={scrollYProgress} direction="right" />
         <Slide src={Picture1} left={"-15%"} progress={scrollYProgress} direction="left" />
