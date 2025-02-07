@@ -13,6 +13,7 @@ export const Experience = () => {
       date: "Jan 2022 - Present",
       text: "Focused on web application development using ReactJS and Typescript. Web animations using GreenSock, Email Marketing with MJML and React, ADS banner ads. Changes to Wordpress pages and maintenance and new features on the legacy site using Html, Css, Javascript.",
       img: Fiap,
+      current: true,
     },
     {
       title: "Web Developer Trainee - FIAP",
@@ -65,7 +66,7 @@ export const Experience = () => {
           style={{ height: lineHeight }}
           className="absolute left-[-14px] top-4 w-[2px] bg-white z-30 max-sm:hidden"
         />
-        {about.map(({ title, text, img, date }, index) => (
+        {about.map(({ title, text, img, date, current }, index) => (
           <motion.div
             key={index}
             className="mb-20 relative flex items-start gap-6 max-sm:flex-col"
@@ -89,6 +90,41 @@ export const Experience = () => {
             </motion.div>
 
             <div className="ml-24 max-sm:ml-0">
+              {current && (
+                <motion.div
+                  custom={0}
+                  initial="hidden"
+                  animate="visible"
+                  className="inline-flex items-center gap-4 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12 text-sm"
+                >
+                  <motion.div
+                    className="w-2 h-2 rounded-full bg-green-500 relative opacity-20"
+                    animate={{
+                      scale: [1, 0.95, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }}
+                  />
+                  <motion.div
+                    className="w-2 h-2 rounded-full bg-green-500 blur-sm absolute"
+                    animate={{
+                      opacity: [1, 0.5, 1],
+                      scale: [1, 0.95, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: "easeInOut",
+                    }}
+                  />
+
+                  <span className="text-sm text-white tracking-wide">Current</span>
+                </motion.div>
+              )}
+
               <Image src={img} alt="Step icon" width={46} className="mb-8" />
               <p className="text-xl mb-7">{title}</p>
               <p className="text-lg opacity-80">{text}</p>
