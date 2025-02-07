@@ -63,7 +63,7 @@ export const Experience = () => {
       <div className="relative max-w-[735px] ml-9 max-sm:ml-4">
         <motion.div
           style={{ height: lineHeight }}
-          className="absolute left-[0.813rem] top-4 w-[2px] bg-white z-30 max-sm:hidden"
+          className="absolute left-[-14px] top-4 w-[2px] bg-white z-30 max-sm:hidden"
         />
         {about.map(({ title, text, img, date }, index) => (
           <motion.div
