@@ -1,6 +1,6 @@
 "use client";
 
-import Picture1 from "@/assets/me.jpeg";
+import Picture1 from "@/assets/scroll-letter/me.jpeg";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -19,7 +19,7 @@ const Phrase = ({ src, phrase }: { src: StaticImageData; phrase: string }) => {
     <div className={"px-5 flex gap-5 items-center"}>
       <p className="text-[7.5vw]">{phrase}</p>
       <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden">
-        <Image style={{ objectFit: "cover", objectPosition: "center 32%" }} src={src} alt="image" fill />
+        <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
       </span>
     </div>
   );
@@ -32,14 +32,14 @@ const Slide = ({ left, src, progress, direction }: SlideProps) => {
 
   return (
     <motion.div style={{ x: translateX, left: left }} className="relative flex whitespace-nowrap">
-      <Phrase src={src} phrase="Pai de Pet" />
+      <Phrase src={src} phrase="Animations" />
       <Phrase src={src} phrase="Front End Developer" />
       <Phrase src={src} phrase="Software Engineer" />
     </motion.div>
   );
 };
 
-export const FrontEnd = () => {
+export const ScrollLetter = () => {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -49,12 +49,12 @@ export const FrontEnd = () => {
   });
 
   return (
-    <main className="overflow-hidden relative w-full h-dvh max-sm:h-[40dvh]">
+    <section className="overflow-hidden relative w-full h-dvh max-sm:h-[40dvh]">
       <div ref={container} className="absolute top-28 left-0">
         <Slide src={Picture1} left={"-45%"} progress={scrollYProgress} direction="right" />
         <Slide src={Picture1} left={"-15%"} progress={scrollYProgress} direction="left" />
-        <Slide src={Picture1} left={"-0%"} progress={scrollYProgress} direction="right" />
+        <Slide src={Picture1} left={"0%"} progress={scrollYProgress} direction="right" />
       </div>
-    </main>
+    </section>
   );
 };

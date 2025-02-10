@@ -1,47 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import stars from "@/assets/stars.png";
+import star from "@/assets/general-star.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Fiap, Cea } from "@/assets/about";
+import { C } from "./const";
 
-export const Experience = () => {
-  const about = [
-    {
-      title: "Programmer - FIAP",
-      date: "Jan 2022 - Present",
-      text: "Focused on web application development using ReactJS and Typescript. Web animations using GreenSock, Email Marketing with MJML and React, ADS banner ads. Changes to Wordpress pages and maintenance and new features on the legacy site using Html, Css, Javascript.",
-      img: Fiap,
-      current: true,
-    },
-    {
-      title: "Web Developer Trainee - FIAP",
-      date: "Ago 2021 - Jan 2022",
-      text: "Creation and maintenance of web applications using HTML, CSS, JavaScript and PHP (Twig) on the web development side along with changes to Wordpress. Creation of ADS banners for advertisements using GSAP (GreenSock) for animations. Email marketing development using MJML and React technologies",
-      img: Fiap,
-    },
-    {
-      title: "FreeLancer - C&A Count",
-      date: "Jun 2021 -Jun 2021",
-      text: "Mobile screen prototyping with an emphasis on UX and UI for a project to facilitate financial calculations at C&A stores.",
-      img: Cea,
-    },
-    {
-      title: "IT Trainee - FIAP",
-      date: "Jan 2020 - Ago 2021",
-      text: "Monitoring classes, controlling access passwords, distributing and controlling files on the network, controlling remote access, supporting students and organizing classrooms and computer labs.",
-      img: Fiap,
-    },
-  ];
-
+export const About = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
   const lineHeight = useTransform(scrollYProgress, [0, 0.9], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} className="mt-48 max-xl:px-12 max-sm:px-5 max-w-[68.188rem] m-auto relative" id="about">
-      <div className="flex items-center gap-7 mb-14">
+    <section
+      ref={containerRef}
+      className="mt-52 max-xl:px-12 max-sm:px-5 max-w-[68.188rem] m-auto relative mb-52"
+      id="about"
+    >
+      <div className="flex items-center gap-7 mb-44">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +33,7 @@ export const Experience = () => {
           transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <Image src={stars} alt="Gradient Image" width={39} />
+          <Image src={star} alt="Gradient Image" width={39} />
         </motion.div>
       </div>
 
@@ -66,10 +42,10 @@ export const Experience = () => {
           style={{ height: lineHeight }}
           className="absolute left-[-14px] top-4 w-[2px] bg-white z-30 max-sm:hidden"
         />
-        {about.map(({ title, text, img, date, current }, index) => (
+        {C.map(({ title, text, img, date, current }, index) => (
           <motion.div
             key={index}
-            className="mb-20 relative flex items-start gap-6 max-sm:flex-col"
+            className="mb-20 relative flex items-start gap-6 max-sm:flex-col last:mb-0"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import marqueeIcon from "@/assets/marquee.png";
+import marqueeIcon from "@/assets/marquee/marquee.png";
 
 import * as motion from "motion/react-client";
 

@@ -1,24 +1,23 @@
-import { Experience } from "./experience";
-import Footer from "./footer";
-import { FrontEnd } from "./letters";
+import { Navbar } from "./navbar";
 import { Hero } from "./hero";
 import { Marquee } from "./marquee";
+import { About } from "./about";
+import { ScrollLetter } from "./scroll-letter";
 import { MoreProjects } from "./more-projects";
-import { Navbar } from "./navbar";
-import { SomeProjects } from "./some-projects";
+import { Projects } from "./projects";
+import { Footer } from "./footer";
 
 export const HomeTemplate = () => {
   return (
-    <main className="">
+    <main>
       <Navbar />
       <Hero />
       <Marquee />
-      <Experience />
-      <SomeProjects />
+      <About />
+      <Projects />
       <MoreProjects />
-      <FrontEnd />
+      <ScrollLetter />
       <Footer />
-      {/* <div className="h-[900vh]" /> */}
     </main>
   );
 };

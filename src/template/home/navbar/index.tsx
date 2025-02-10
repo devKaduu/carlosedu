@@ -3,7 +3,7 @@
 import { useLenis } from "lenis/react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { GoHome, GoPerson } from "react-icons/go";
+import { GoHome, GoFile } from "react-icons/go";
 
 const tabs = [
   {
@@ -79,11 +79,11 @@ export const Navbar = () => {
       </ul>
       <div className="flex items-center">
         <button className="text-base bg-bgButtonNavbar py-3 px-5 rounded-button font-medium">
-          <a href="https://www.instagram.com/kadu_sz/">Hire me</a>
+          <a href="https://www.linkedin.com/in/carlos-eduardo-sousa/">Hire me</a>
         </button>
         <button className="y-3 px-3 rounded-full">
-          <a href="https://www.instagram.com/kadu_sz/">
-            <GoPerson size={22} />
+          <a href="./documents/cv/cv-carlos-eduardo-sousa.pdf" target="_blank">
+            <GoFile size={22} />
           </a>
         </button>
       </div>
