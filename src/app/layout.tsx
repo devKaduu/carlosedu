@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="en
     "
     >
-      <ReactLenis root options={{ duration: 1.8, syncTouch: true, touchMultiplier: 2 }}>
+      <ReactLenis root options={{ duration: 1.8, syncTouch: true, touchMultiplier: 2.2 }}>
         <body className={`${poppins.variable}  antialiased`}>
           <MouseMoveEffect />
           {children}

@@ -16,10 +16,10 @@ interface SlideProps {
 
 const Phrase = ({ src, phrase }: { src: StaticImageData; phrase: string }) => {
   return (
-    <div className={"px-5 flex gap-5 items-center"}>
-      <p className="text-[7.5vw]">{phrase}</p>
+    <div className="px-5 flex gap-5 items-center ">
+      <p className="text-[7.5vw] max-sm:text-[12vw]">{phrase}</p>
       <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden">
-        <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
+        <Image src={src} alt="Image Park" className="h-36  object-cover" />
       </span>
     </div>
   );
@@ -49,7 +49,7 @@ export const ScrollLetter = () => {
   });
 
   return (
-    <section className="overflow-hidden relative w-full h-dvh max-sm:h-[40dvh]">
+    <section className="overflow-hidden relative w-full h-dvh max-sm:h-[50dvh]">
       <div ref={container} className="absolute top-28 left-0">
         <Slide src={Picture1} left={"-45%"} progress={scrollYProgress} direction="right" />
         <Slide src={Picture1} left={"-15%"} progress={scrollYProgress} direction="left" />

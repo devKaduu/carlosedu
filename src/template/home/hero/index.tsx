@@ -11,6 +11,7 @@ export const Hero = () => {
         <Image
           src={imageHero}
           alt="hero"
+          priority
           className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] -z-10 object-cover max-xl:h-[568px]"
         />
         <p className="text-base text-center mb-6">

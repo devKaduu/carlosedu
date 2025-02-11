@@ -1,10 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
-import * as motion from "motion/react-client";
 
-import FooterHover from "@/assets/footer/footer.jpeg";
 import { useLenis } from "lenis/react";
 
 const links = [
@@ -25,8 +22,8 @@ export const Content = () => {
   const lenis = useLenis();
 
   return (
-    <div className="bg-[#101111] py-8 px-12 h-full w-full flex flex-col justify-between">
-      <div className="flex shrink-0 gap-20 flex-wrap relative">
+    <div className="bg-[#101111] py-8 px-12 h-full w-full flex flex-col justify-between relative">
+      <div className="flex shrink-0 gap-20 flex-wrap mt-40 max-2xl:mt-0 max-sm:mt-40">
         <div className="flex flex-col gap-2">
           <h3 className="mb-2 uppercase text-[#ffffff80]">About</h3>
           {links.map(({ name, href }, index) => (
@@ -34,12 +31,13 @@ export const Content = () => {
               key={index}
               href={href}
               target="_blank"
+              rel="noreferrer"
               onClick={(e) => {
                 const isExternal = href.startsWith("http");
 
                 if (!isExternal) {
                   e.preventDefault();
-                  lenis?.scrollTo(href, { offset: -150, duration: 2.5 });
+                  lenis?.scrollTo(href, { offset: -80, duration: 2.5 });
                 }
               }}
             >
@@ -50,7 +48,7 @@ export const Content = () => {
         <div className="flex flex-col gap-2">
           <h3 className="mb-2 uppercase text-[#ffffff80]">Contact</h3>
           {contact.map(({ name, href }, index) => (
-            <a key={index} href={href} target="_blank">
+            <a key={index} href={href} target="_blank" rel="noreferrer">
               {name}
             </a>
           ))}
@@ -60,17 +58,9 @@ export const Content = () => {
             Download CV
           </a>
         </div>
-        <motion.div
-          className="absolute -top-20 cursor-help -right-12 blur-[20px]"
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 0.3 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Image src={FooterHover} alt="Me" width={500} />
-        </motion.div>
       </div>
-      <div className="flex justify-between items-end">
-        <h1 className="text-[14vw] leading-[0.8] mt-10">CARLOS EDU</h1>
+      <div className="flex justify-between items-end z-10">
+        <h1 className="text-[14vw] leading-[0.8] mt-10 max-xl:text-[13vw] max-sm:text-4xl">CARLOS EDU</h1>
         <p>©copyright</p>
       </div>
     </div>

@@ -17,7 +17,7 @@ export const About = () => {
       className="mt-52 max-xl:px-12 max-sm:px-5 max-w-[68.188rem] m-auto relative mb-52"
       id="about"
     >
-      <div className="flex items-center gap-7 mb-44">
+      <div className="flex items-center gap-7 mb-44 max-sm:mb-8">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export const About = () => {
           transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <Image src={star} alt="Gradient Image" width={39} />
+          <Image src={star} alt="Gradient Image" />
         </motion.div>
       </div>
 
@@ -50,7 +50,7 @@ export const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
-              delay: index * 0.3,
+              delay: index * 0.2,
               ease: "easeInOut",
             }}
             viewport={{ once: true, amount: 0.5 }}
@@ -101,9 +101,9 @@ export const About = () => {
                 </motion.div>
               )}
 
-              <Image src={img} alt="Step icon" width={46} className="mb-8" />
+              <Image src={img} alt="Step icon" className="mb-8 w-[48px]" />
               <p className="text-xl mb-7">{title}</p>
-              <p className="text-lg opacity-80">{text}</p>
+              <p className="text-lg opacity-70">{text}</p>
             </div>
           </motion.div>
         ))}

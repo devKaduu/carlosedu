@@ -10,8 +10,6 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
-  /* cursor: none; */
 }
 
 .background-gradient {
