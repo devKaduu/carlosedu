@@ -27,7 +27,7 @@ export const MoreProjects = () => {
 
   return (
     <section ref={targetRef} className="max-xl:px-12 max-sm:px-5">
-      <div className="flex items-center gap-7 max-w-[68.188rem] m-auto">
+      <div className="flex items-center gap-7 max-w-[68.188rem] m-auto relative">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,8 +46,9 @@ export const MoreProjects = () => {
           className="flex items-center justify-between flex-1 text-sm"
         >
           <Image src={star} alt="Gradient Image" width={39} />
-          <span className="text-sm opacity-20 italic max-sm:text-right max-sm:text-xs ">
-            Click on a project and you&apos;ll see the repository
+          <span className="text-sm opacity-20 italic max-sm:text-right max-sm:text-xs text-center ">
+            Click on a project and you&apos;ll see the repository <br /> This section is controlled by the scroll,{" "}
+            <b>horizontal scroll</b>
           </span>
         </motion.div>
       </div>
