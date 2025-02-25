@@ -32,7 +32,7 @@ const Slide = ({ left, src, progress, direction }: SlideProps) => {
 
   return (
     <motion.div style={{ x: translateX, left: left }} className="relative flex whitespace-nowrap">
-      <Phrase src={src} phrase="Animations" />
+      <Phrase src={src} phrase="FullStack Developer" />
       <Phrase src={src} phrase="Front End Developer" />
       <Phrase src={src} phrase="Software Engineer" />
     </motion.div>
