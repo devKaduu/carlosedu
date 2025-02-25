@@ -85,7 +85,11 @@ export const Navbar = () => {
             <GoFile size={22} />
           </a>
 
-          <a className="absolute w-full top-12" href="./documents/cv/cv-carlos-eduardo-sousa.pdf" target="_blank">
+          <a
+            className="absolute w-full top-12 max-sm:hidden"
+            href="./documents/cv/cv-carlos-eduardo-sousa.pdf"
+            target="_blank"
+          >
             <motion.p
               className="text-sm opacity-50 italic"
               initial={{ opacity: 0 }}
