@@ -4,15 +4,17 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 export default function Contact() {
-  const now = new Date();
-  const horaBrasil12h = now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", hour12: true });
+  const [sampleInputIndex, setSampleInputIndex] = useState(0);
+
+  const placeholder = ["Your mini message", "Send me a message", "Talk to me please", "I'm here for you", "😭😭"];
 
   const textButton = "SUBMIT";
   const DURATION = 0.25;
   const STAGGER = 0.025;
 
-  const placeholder = ["Your mini message", "Send me a message", "Talk to me please", "I'm here for you", "😭😭"];
-  const [sampleInputIndex, setSampleInputIndex] = useState(0);
+  const date = new Date();
+
+  const horaBrasil12h = date.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", hour12: true });
 
   useEffect(() => {
     const interval = setInterval(() => {
