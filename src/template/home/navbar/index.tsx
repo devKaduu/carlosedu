@@ -81,11 +81,11 @@ export const Navbar = () => {
           <a href="https://www.linkedin.com/in/carlos-eduardo-sousa/">Hire me</a>
         </button>
         <button className="y-3 px-3 rounded-full">
-          <a href="./documents/cv/cv-carlos-eduardo-sousa-front-end.pdf" target="_blank">
+          <a href="./documents/cv/cv-carlos-eduardo-fullstack.pdf" target="_blank">
             <GoFile size={22} />
           </a>
 
-          <a className="absolute w-full top-12 max-sm:hidden" href="./documents/cv/cv-carlos-eduardo-sousa-front-end.pdf" target="_blank">
+          <a className="absolute w-full top-12 max-sm:hidden" href="./documents/cv/cv-carlos-eduardo-fullstack.pdf" target="_blank">
             <motion.p
               className="text-sm opacity-50 italic"
               initial={{ opacity: 0 }}

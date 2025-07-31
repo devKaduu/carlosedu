@@ -54,7 +54,7 @@ export const Content = () => {
           ))}
         </div>
         <div className="flex flex-col gap-2">
-          <a className="mb-2 uppercase text-[#ffffff80]" href="./documents/cv/cv-carlos-eduardo-sousa.pdf" download>
+          <a className="mb-2 uppercase text-[#ffffff80]" href="./documents/cv/cv-carlos-eduardo-fullstack.pdf" download>
             Download CV
           </a>
         </div>

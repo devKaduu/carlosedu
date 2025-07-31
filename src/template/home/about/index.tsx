@@ -60,7 +60,7 @@ export const About = () => {
               whileInView={{ scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
               viewport={{ once: true, amount: 0.5 }}
-              className="flex items-center justify-center font-bold text-sm absolute left-[-84px] top-2 bg-transparent italic py-8 max-sm:static "
+              className="flex items-center justify-center font-bold text-sm absolute left-[-84px] top-2 bg-transparent italic py-8 max-sm:static"
             >
               {date}
             </motion.div>
@@ -101,7 +101,7 @@ export const About = () => {
                 </motion.div>
               )}
 
-              <Image src={img} alt="Step icon" className="mb-8 w-[48px]" />
+              <Image src={img} alt="Step icon" className="mb-5 w-[48px]" />
               <p className="text-xl mb-7">{title}</p>
               <p className="text-lg opacity-70">{text}</p>
             </div>

@@ -16,8 +16,8 @@ export const Hero = () => {
           className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] -z-10 object-cover max-xl:h-[568px]"
         />
         <p className="text-base text-center mb-6">
-          Full-stack programmer building versatile applications <br /> with a focus on React.js, TypeScript, and
-          Next.js..
+          Full-stack programmer building versatile applications <br /> with a focus on React.js,
+          TypeScript, and Next.js..
         </p>
         <div className="flex justify-center items-center gap-3">
           <a href="https://www.linkedin.com/in/carlos-eduardo-sousa/" target="_blank">
