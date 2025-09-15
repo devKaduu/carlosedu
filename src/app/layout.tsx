@@ -1,7 +1,7 @@
+import { MouseMoveEffect } from "@/components/MouseMoveEffect";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
-import { MouseMoveEffect } from "@/components/MouseMoveEffect";
 
 import { ReactLenis } from "@/utils/lenis";
 
@@ -18,23 +18,16 @@ export const metadata: Metadata = {
   description: "Learn about us...",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en
-    "
-    >
-      <ReactLenis root options={{ duration: 1.8, syncTouch: true, touchMultiplier: 2.2 }}>
-        <body className={`${poppins.variable}  antialiased`}>
+    <ReactLenis root>
+      <html lang="pt-br">
+        <body className={`${poppins.variable} antialiased`}>
           <MouseMoveEffect />
           {children}
           <Analytics />
         </body>
-      </ReactLenis>
-    </html>
+      </html>
+    </ReactLenis>
   );
 }
