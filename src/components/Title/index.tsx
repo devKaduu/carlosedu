@@ -17,13 +17,13 @@ export const Title = ({ firstText, secondText, image, src }: TitleProps) => {
   return (
     <a
       href={src}
-      className="flex flex-row items-center justify-center w-screen h-fit border-bottom-gradient text-center"
+      className="flex flex-row items-center justify-start sm:justify-center px-5 sm:px-0 w-screen h-fit border-bottom-gradient text-center py-10 sm:py-0"
       onMouseMove={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <p className="uppercase text-8xl font-bold leading-normal not-italic max-2xl:text-7xl max-xl:text-4xl max-sm:text-2xl">
+      <p className="uppercase text-8xl font-bold leading-normal not-italic max-2xl:text-7xl max-xl:text-4xl max-sm:text-3xl">
         {firstText}
       </p>
       <motion.img
@@ -34,10 +34,10 @@ export const Title = ({ firstText, secondText, image, src }: TitleProps) => {
         }}
         transition={{ ease: "backOut", duration: 0.5 }}
         src={image}
-        className="max-sm:hidden  h-28"
+        className="max-sm:hidden h-28"
         alt="Projects"
       />
-      <p className="uppercase text-8xl font-bold leading-normal not-italic max-2xl:text-7xl max-xl:text-4xl max-sm:text-2xl">
+      <p className="uppercase text-8xl font-bold leading-normal not-italic max-2xl:text-7xl max-xl:text-4xl max-sm:text-3xl">
         {secondText}
       </p>
     </a>

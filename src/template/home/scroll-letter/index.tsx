@@ -4,8 +4,8 @@ import mephoto from "@/assets/scroll-letter/me.jpeg";
 import Image from "next/image";
 import { useRef } from "react";
 
+import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 import { StaticImageData } from "next/image";
-import { MotionValue, useScroll, useTransform, motion } from "motion/react";
 
 interface SlideProps {
   left: string;
@@ -49,7 +49,7 @@ export const ScrollLetter = () => {
   });
 
   return (
-    <section className="overflow-hidden relative w-full h-dvh max-sm:h-[50dvh]">
+    <section className="overflow-hidden relative w-full h-dvh max-sm:h-[50dvh] hidden sm:flex">
       <div ref={container} className="absolute top-28 left-0">
         <Slide src={mephoto} left={"-45%"} progress={scrollYProgress} direction="right" />
         <Slide src={mephoto} left={"-15%"} progress={scrollYProgress} direction="left" />
