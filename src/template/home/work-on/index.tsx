@@ -1,14 +1,14 @@
-import Image from "next/image";
 import star from "@/assets/general-star.png";
-import * as motion from "motion/react-client";
 import { Title } from "@/components/Title";
+import * as motion from "motion/react-client";
+import Image from "next/image";
 
-import { Postech, Rocknew, FIAP, Appfiap } from "@/assets/some-projects";
+import { Appfiap, FIAP, Postech, Rocknew } from "@/assets/some-projects";
 
 export const WorkOn = () => {
   return (
-    <section className="mt-48 max-xl:px-12 max-sm:px-5 relative max-w-[68.188rem] m-auto mb-52" id="projects">
-      <div className="flex items-center gap-7 mb-44">
+    <section className="mt-36 max-xl:px-12 max-sm:px-5 relative max-w-[68.188rem] m-auto mb-36" id="projects">
+      <div className="flex items-center justify-start gap-7 mb-8 sm:mb-24">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ export const WorkOn = () => {
           viewport={{ once: true, amount: 0.7 }}
           className="text-sectionTitle max-sm:text-3xl"
         >
-          Some Featured projects <br className="sm:hidden" /> I have worked on
+          Projetos que marcaram <br className="sm:hidden" /> minha jornada
         </motion.p>
 
         <motion.div
@@ -34,22 +34,24 @@ export const WorkOn = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="flex items-center justify-center flex-col"
+        className="flex items-center justify-center flex-col mx-auto"
       >
-        <Title firstText="FI" secondText="AP" image={FIAP.src} src="https://www.fiap.com.br/" />
-        <Title
-          firstText="FIAP&nbsp;"
-          secondText="SCHOOL / WEB and App"
-          image={Appfiap.src}
-          src="https://www.fiap.com.br/colegio/"
-        />
-        <Title firstText="pos" secondText="tech" image={Postech.src} src="https://postech.fiap.com.br/" />
-        <Title
-          firstText="rock&nbsp;"
-          secondText="new ventures"
-          image={Rocknew.src}
-          src="https://www.fiap.com.br/rock-new-ventures/"
-        />
+        <div className="flex flex-col items-center justify-start">
+          <Title firstText="FI" secondText="AP" image={FIAP.src} src="https://www.fiap.com.br/" />
+          <Title
+            firstText="FIAP&nbsp;"
+            secondText="SCHOOL / App"
+            image={Appfiap.src}
+            src="https://www.fiap.com.br/colegio/"
+          />
+          <Title firstText="pos" secondText="tech" image={Postech.src} src="https://postech.fiap.com.br/" />
+          <Title
+            firstText="rock&nbsp;"
+            secondText="new ventures"
+            image={Rocknew.src}
+            src="https://www.fiap.com.br/rock-new-ventures/"
+          />
+        </div>
       </motion.div>
     </section>
   );

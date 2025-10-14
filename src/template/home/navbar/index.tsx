@@ -1,10 +1,10 @@
 "use client";
 
 import { useLenis } from "lenis/react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { GoHome, GoFile } from "react-icons/go";
-import { motion } from "motion/react";
+import { GoFile, GoHome } from "react-icons/go";
 
 const tabs = [
   {
@@ -12,15 +12,15 @@ const tabs = [
     href: "#home",
   },
   {
-    name: "About",
+    name: "Carreira",
     href: "#about",
   },
   {
-    name: "Projects",
+    name: "Projetos",
     href: "#projects",
   },
   {
-    name: "Contact",
+    name: "Conecte-se",
     href: "#footer",
   },
 ];
@@ -78,16 +78,20 @@ export const Navbar = () => {
       </ul>
       <div className="flex items-center relative">
         <button className="text-base bg-bgButtonNavbar py-3 px-5 rounded-button font-medium">
-          <a href="https://www.linkedin.com/in/carlos-eduardo-sousa/">Hire me</a>
+          <a href="https://www.linkedin.com/in/carlos-eduardo-sousa/">Entre em contato</a>
         </button>
         <button className="y-3 px-3 rounded-full">
           <a href="./documents/cv/cv-carlos-eduardo-fullstack.pdf" target="_blank">
             <GoFile size={22} />
           </a>
 
-          <a className="absolute w-full top-12 max-sm:hidden" href="./documents/cv/cv-carlos-eduardo-fullstack.pdf" target="_blank">
+          <a
+            className="absolute w-full top-12 max-sm:hidden"
+            href="./documents/cv/cv-carlos-eduardo-fullstack.pdf"
+            target="_blank"
+          >
             <motion.p
-              className="text-sm opacity-50 italic"
+              className="text-sm  italic"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 0.5 }}
               transition={{
@@ -95,9 +99,9 @@ export const Navbar = () => {
                 ease: "easeInOut",
               }}
             >
-              Download my cv
+              Baixar CV
             </motion.p>
-            <svg viewBox="0 0 286 73" fill="none" className="absolute -left-0 -right-2 -top-3  bottom-0">
+            <svg viewBox="0 0 286 73" fill="none" className="absolute -left-0 -right-2 -top-5  bottom-0">
               <motion.path
                 initial={{ pathLength: 0 }}
                 whileInView={{ pathLength: 1 }}
