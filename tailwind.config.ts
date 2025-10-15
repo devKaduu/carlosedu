@@ -25,6 +25,11 @@ export default {
       borderRadius: {
         button: "2.5rem",
       },
+      fontFamily: {
+        sans: "var(--font-sans)",
+        inter: "var(--font-inter)",
+        antonio: "var(--font-antonio)",
+      },
     },
   },
   plugins: [],

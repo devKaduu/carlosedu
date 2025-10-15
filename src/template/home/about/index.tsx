@@ -34,7 +34,7 @@ export const About = () => {
   return (
     <section
       ref={containerRef}
-      className="mt-52 max-xl:px-12 max-sm:px-5 max-w-[68.188rem] m-auto relative mb-52"
+      className="mt-24 max-xl:px-12 max-sm:px-5 max-w-[68.188rem] m-auto relative mb-52"
       id="about"
     >
       {/* Título */}

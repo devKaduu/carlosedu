@@ -59,7 +59,13 @@ export const MoreProjects = () => {
             >
               {cards.map(({ src, alt, href, technologies }, index) => (
                 <div key={index}>
-                  <CardImageCarrousel index={index} src={src} alt={alt} href={href} technologies={technologies} />
+                  <CardImageCarrousel
+                    index={index}
+                    src={src}
+                    alt={alt}
+                    href={href}
+                    technologies={technologies}
+                  />
                 </div>
               ))}
             </MotionWrapper>

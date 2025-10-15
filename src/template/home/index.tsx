@@ -1,7 +1,6 @@
 import { About } from "./about";
 import { Footer } from "./footer";
 import { Hero } from "./hero";
-import { Marquee } from "./marquee";
 import { MoreProjects } from "./more-projects";
 import { Navbar } from "./navbar";
 import { ScrollLetter } from "./scroll-letter";
@@ -12,7 +11,7 @@ export const HomeTemplate = () => {
     <main>
       <Navbar />
       <Hero />
-      <Marquee />
+      {/* <Marquee /> */}
       <About />
       <WorkOn />
       <MoreProjects />
